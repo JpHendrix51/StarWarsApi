@@ -9,8 +9,14 @@ export class Navbar extends React.Component {
 					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
+					<Link to="/">
+						<button className="btn btn-primary">People</button>
+					</Link>
+					<Link to="/vehicles">
+						<button className="btn btn-primary">Vehicles</button>
+					</Link>
+					<Link to="/planets">
+						<button className="btn btn-primary">Planets</button>
 					</Link>
 				</div>
 			</nav>

@@ -2,7 +2,6 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Context } from "../store/appContext";
-
 export class Home extends React.Component {
 	render() {
 		return (
@@ -14,15 +13,18 @@ export class Home extends React.Component {
 								store.people &&
 								store.people.map((item, index) => {
 									return (
-										<div key={index} className="col-4 mb-5">
-											<div className="card">
-												<img src="..." className="card-img-top" alt="..." />
-												<div className="card-body">
-													<h5 className="card-title">{item.name}</h5>
-													<p className="card-text">{item.homeworld}</p>
+										<div key={index} className="col-3 m-3 p-3 border border-primary">
+											<h5 className="card-title">{item.name}</h5>
+
+											<a href={item.homeworld}>Visit {item.name} Home Planet </a>
+											<div className="d-flex justify-content-between">
+												<div>
 													<a href="#" className="btn btn-primary">
 														{item.gender}
 													</a>
+												</div>
+												<div>
+													<i className="far fa-star" />
 												</div>
 											</div>
 										</div>
@@ -32,7 +34,6 @@ export class Home extends React.Component {
 						}}
 					</Context.Consumer>
 				</div>
-
 				<div className="row">
 					<Context.Consumer>
 						{({ store, actions }) => {
