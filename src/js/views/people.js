@@ -10,14 +10,17 @@ export class People extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div className="m-5">
-							<h1 className="text-center text-danger">People</h1>
+							<h1 className="text-center text-primary">People</h1>
 							<ul className="list-group">
 								{store.people &&
 									store.people.map((e, i) => {
 										return (
 											<li key={i} className="list-group-item d-flex justify-content-between">
-												{e.name}
-												<i className="far fa-star float-right" />
+												{e.name} {e.terrain}
+												<i className="far fa-star" onClick="Remove()" />
+												<Link to={"/single/" + i}>
+													<span> Link to: {i.name}</span>
+												</Link>
 											</li>
 										);
 									})}

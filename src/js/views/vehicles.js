@@ -18,6 +18,9 @@ export class Vehicles extends React.Component {
 											<li key={i} className="list-group-item d-flex justify-content-between">
 												{e.name}
 												<i className="far fa-star float-right" />
+												<Link to={"/vehiclesSingle/" + i}>
+													<span> Link to: {i.name}</span>
+												</Link>
 											</li>
 										);
 									})}

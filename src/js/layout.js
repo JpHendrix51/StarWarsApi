@@ -7,7 +7,9 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Vehicles } from "./views/vehicles";
 import { Planets } from "./views/planets";
+import { People } from "./views/people";
 import injectContext from "./store/appContext";
+import { VehiclesSingle } from "./views/vehiclesSingle";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -28,8 +30,10 @@ export class Layout extends React.Component {
 							<Route exact path="/" component={Home} />
 							<Route path="/demo" component={Demo} />
 							<Route path="/single/:theid" component={Single} />
+							<Route path="/vehiclesSingle/:theid" component={VehiclesSingle} />
 							<Route path="/vehicles" component={Vehicles} />
 							<Route path="/planets" component={Planets} />
+							<Route path="/people" component={People} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

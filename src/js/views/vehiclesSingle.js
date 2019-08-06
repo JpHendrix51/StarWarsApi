@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export class Single extends React.Component {
+export class VehiclesSingle extends React.Component {
 	render() {
 		return (
 			<div className="jumbotron">
 				<Context.Consumer>
 					{({ store }) => {
-						return <h1 className="display-4">{store.people[this.props.match.params.theid].name}</h1>;
+						return <h1 className="display-4">{store.vehicles[this.props.match.params.theid].name}</h1>;
 					}}
 				</Context.Consumer>
 
@@ -25,6 +25,6 @@ export class Single extends React.Component {
 	}
 }
 
-Single.propTypes = {
+VehiclesSingle.propTypes = {
 	match: PropTypes.object
 };

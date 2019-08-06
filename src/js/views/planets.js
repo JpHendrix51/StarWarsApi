@@ -18,6 +18,9 @@ export class Planets extends React.Component {
 											<li key={i} className="list-group-item d-flex justify-content-between">
 												{e.name} {e.terrain}
 												<i className="far fa-star" onClick="Remove()" />
+												<Link to={"/planetsSingle/" + i}>
+													<span> Link to: {i.name}</span>
+												</Link>
 											</li>
 										);
 									})}
